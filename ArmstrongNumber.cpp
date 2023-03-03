@@ -4,16 +4,16 @@
 using namespace std;
 
 int n, sum, num = 0;
-int getPower(int num) {
+int getPower(int num) { // Number's length
     if (num == 0) {
-        return n; 	// Recursion termination, we need to get the number's length
+        return n; 	
     }
     n++;
     return getPower(num / 10);
 }
 int calculateSum(int num, int n) {
         if (num == 0) {
-        return sum; // Recursion termination 
+        return sum; 
     }
     sum += pow((num % 10), n); 		// We are summing up each digit raised to the length's power
     return calculateSum(num / 10, n);
